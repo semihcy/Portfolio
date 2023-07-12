@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+
+  <style>
+    
+    *{
+      font-family: 'Raleway', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+    }
+    
+    h1 {
+      color: #333333;
+      margin-left: 80px;
+      margin-bottom: 0;
+    }
+    h5 {
+      color: #333333;
+      margin-left: 80px;
+      margin-top: 2px;
+    }
+    
+    p {
+      color: #323232;
+      line-height: 1.5;
+      margin-left: 80px;
+    }
+    .background-image {
+      position: relative;
+    } 
+
+    .background-image::before  {
+      background-image: url('background_portfolio.jpg');
+      content: "";
+      position: fixed;
+      border: 65px solid #DDD0C8; 
+      padding: 10px;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.7;
+    }
+    .project {
+      margin-top: 10px;
+    }
+    .project .social-icons {
+    margin-left: 80px;
+    }
+
+   .project .social-icons a {
+   display: inline-block;
+   margin-right: 10px;
+   color: #333333;
+   font-size: 20px;
+   text-decoration: none;
+   padding: 8px 12px;
+   border: 1px solid #333333;
+   border-radius: 4px;
+   transition: background-color 0.3s ease;
+   }
+
+   .project .social-icons a:hover {
+   background-color: #333333;
+   color: #ffffff;
+   }
+   .cv-button {
+  margin-left: 80px;
+  margin-top: 20px;
+}
+
+.cv-button a {
+  text-decoration: none;
+}
+
+.cv-button button {
+  padding: 10px 20px;
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cv-button button:hover {
+  background-color: #555555;
+}
+   .projects-icon{
+   color: #666666;
+   }
+
+   .projects-icon a{
+   font-weight: 900;
+   margin-left: 5px;
+   }
+
+    .project h2 {
+    color: #333333;
+    margin-left: 80px;
+    }
+    
+    .project p {
+      color: #666666;
+      margin-right: 400px;
+      margin-left: 80px;
+      border: 2px solid #DDD0C8;
+      padding: 10px;
+      background-color: #DDD0C8 ;
+      font-size: large;
+      opacity: 0.9;
+    }
+    .project img{
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      margin: 5px;
+      padding: 5px;
+      margin-left: 60px;
+      margin-top: 50px;
+      z-index: 1;
+      display: inline-block;
+      border: 2px solid black;
+    }
+
+    .skills_title{
+     color: #666666;
+     font-size: large;
+     font-weight: bold;
+     text-decoration:underline;
+    }
+
+    .projects_title{
+     color: #666666;
+     font-size: 24px;
+     font-weight: bold;
+    }
+    .projects_subtitle {
+    font-size: 15px; 
+    color: #000000;
+    margin-top: 5px; 
+    }  
+    .copyright_title {
+      position:relative;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #434242;
+      user-select: none;
+    }
+    .scroll-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: none;
+      cursor: pointer;
+      background-color: #333333;
+      color: #ffffff;
+      padding: 10px;
+      border-radius: 50%;
+      font-size: 20px;
+      z-index: 9999;
+      transition: background-color 0.3s ease;
+    }
+
+    .scroll-to-top.show {
+      display: block;
+    }
+    .scroll-to-top:hover {
+    background-color: #555555;
+    }
+    @media only screen and (max-width: 600px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  h1, h5, p {
+    margin-left: 20px;
+  }
+  .project .social-icons, .cv-button {
+    margin-left: 20px;
+  }
+  .project img {
+    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  .project p {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  .project h2 {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  h1, h5, p {
+    margin-left: 40px;
+  }
+  .project .social-icons, .cv-button {
+    margin-left: 40px;
+  }
+  .project img {
+    margin-left: 30px;
+    width: 150px;
+    height: 150px;
+  }
+  .project p {
+    margin-right: 10px;
+    margin-left: 40px;
+  }
+  .project h2 {
+    margin-left: 40px;
+  }
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.topnav.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 100;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav{
+    position: sticky;
+  }
+  .topnav .icon{
+    display: none;
+  }
+  .topnav.responsive {
+    position: relative;
+    z-index: 9999;
+  }
+
+  .topnav.responsive a {
+    position: relative;
+    z-index: 9999;
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+  </style>
+</head>
+<body>
+<div class="background-image">
+  <div class="topnav" id="myTopnav">
+    <a href="#me">About Me</a>
+    <a href="#skill">Skills</a>
+    <a href="#project">Projects</a>
+    <a href="#edu">Education</a>
+    <a href="#lang">Languages</a>
+    <a href="#hobbie">Hobbies</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <div class="project"> 
+   <img src="me.jpg" alt="Me">
+   <div class="social-icons">
+    <a href="mailto:ssemihcay.com" class="social-icon" target="_blank"><i class="fas fa-envelope"></i></a>
+    <a href="https://github.com/semihcy" class="social-icon" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/semih-%C3%A7ay-628945200/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.instagram.com/photobysemih/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>  
+  </div>
+  </div>
+  <div class="project">
+    <h1>Semih Cay</h1>
+    <h5>Software Developer | Student </h5>
+
+    <div class="project" id="me">
+      <h2>About Me</h2>
+      <p>As a dedicated computer engineering student with a strong passion for software development, who wants to learn German and French, and improve himself on Swift, I seek an internship opportunity to apply my skills and gain practical experience in a dynamic work environment. I am eager to contribute as an amateur developer and continue to grow my skills while supporting the team's objectives. It is never an option to give up on the project that I work on.</p>
+      <div class="cv-button">
+        <a href="https://drive.google.com/file/d/1lMNf0eMpGvSnMJl7coD8yoQ6KZ7Ijipr/view?usp=drive_link" target="_blank" download>
+          <button>Download CV</button>
+        </a>
+      </div>
+    </div>
+    <div class="project" id="skill">
+      <h2>Skills</h2>
+    <p><span class="skills_title">OOP Engineering :</span> Object-oriented programming (OOP) is an essential skill that every software developer should possess. As an amateur developer, I recognize the significance of OOP and strive to incorporate its principles into my code. As I continue to develop my skills, I actively seek opportunities to practice and refine my understanding of OOP.</p>
+    <p><span class="skills_title">HTML-CSS-JavaScript :</span> With my current skill set, I am confident in my ability to create simple websites. I possess the necessary skills in HTML, CSS, and JavaScript to design and develop functional and visually appealing web pages. In addition to website development, I am actively expanding my knowledge of JavaScript libraries.</p>
+    <p><span class="skills_title">Swift :</span> As I am currently working on a project with Swift, I am increasingly drawn to this field and eager to further develop my skills in Swift app development. I am dedicated to expanding my expertise in Swift and focusing on this area exclusively.</p>
+    <p><span class="skills_title">C# :</span> As I continue to progress in my programming journey, Java has become my primary focus. However, I also possess a valuable skillset in C# that I acquired during my academic studies.</p>
+    <p><span class="skills_title">Java :</span> Java holds a special place in my heart as one of the most beautiful programming languages. Its elegance, versatility, and robustness make it an indispensable tool in my programming repertoire.</p>
+    <p><span class="skills_title">VCS-Git :</span> In both my personal projects and freelance endeavors, I consider Git to be an essential tool that I never overlook. Its seamless integration into my workflow has proven invaluable for version control and collaboration.</p>  
+  </div>
+    <div class="project" id="project">
+      <h2>Projects</h2>
+      <p><span class="projects_title">Portfolio</span>
+      <a href="https://semihcay.com/" class="projects-icon" target="_blank"><i class="fas fa-arrow-alt-circle-right"></i></a>
+      <br>
+      <span class="projects_subtitle">Developed with HTML-CSS-JavaScript</span>
+      <br>
+      <span class="projects_content">This website serves as a personal portfolio, providing visitors with an overview of my background, expertise, and aspirations.</span>
+      </p>
+      <p>
+        <span class="projects_title">Movidle</span>
+      <a href="https://github.com/semihcy/Movidle" class="projects-icon" target="_blank"><i class="fas fa-arrow-alt-circle-right"></i></a>
+      <br>
+      <span class="projects_subtitle">Developed with Java</span>
+      <br>
+      <span class="projects_content"> This interactive game engages players by challenging them to guess the names of popular movies.</span>
+      </p>
+    </div>
+    <div class="project" id="edu">
+      <h2>Education</h2>
+      <p><span class="projects_title">Erciyes University</span>
+      <br>
+      Computer Engineering
+      <br>
+      Bachelor's Degree | 2020 - 2025
+    </p>
+    </div>
+    <div class="project" id="lang">
+      <h2>Languages</h2>
+      <p><span class="projects_title">English </span>
+      <br>
+      I have enough English to survive, if not as much as an Englishman.
+      </p>
+      <p><span class="projects_title">Turkish </span>
+      <br>
+      Default native language.
+      </p>
+    </div>
+    <div class="project" id="hobbie">
+     <h2>Hobbies</h2>
+     <p>
+      <span class="projects_title">Photography :</span>
+      With a camera in hand, I embark on a journey to freeze moments in time, preserving memories that will last a lifetime.
+      <br>
+      <span class="projects_title">Skiing :</span>
+      There's something exhilarating about gliding down snow-covered slopes, feeling the crisp mountain air against your face.
+      <br>
+      <span class="projects_title">Travelling :</span>
+      The world is a vast and wondrous place, and I have a deep passion for exploring its diverse cultures, landscapes, and hidden gems.
+      <br>
+      <span class="projects_title">Sci-fi Movies :</span>
+      Sci-fi movies transport us to extraordinary realms, where imagination knows no bounds and the possibilities are endless.
+      <br>
+      <span class="projects_title">Eating :</span>
+      As an avid food enthusiast, I relish the experience of savoring diverse flavors, discovering new cuisines, and exploring culinary delights from around the world.
+     </p>
+    </div>
+    <div class="copyright_title">© 2023 Semih Çay</div>
+  </div>
+</div>
+  <a href="#" class="scroll-to-top" id="scrollToTopBtn">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  <script src="portfolio.js"></script>
+</body>
+</html>
